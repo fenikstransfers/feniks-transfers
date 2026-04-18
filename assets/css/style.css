@@ -1322,7 +1322,7 @@ footer {
 .mobile-menu .lang-switch {
   display: flex;
   justify-content: center;
-  gap: .5rem;
+  gap: .6rem;
   border-left: none;
   margin: 1.5rem 0 0;
   padding: 1.5rem 0 0;
@@ -1333,20 +1333,45 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .5rem .9rem;
-  font-size: .85rem;
+  padding: .6rem 1rem;
+  font-size: .9rem;
   font-weight: 700;
+  color: #1a1a1a;
+  background: #f5f3ef;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  min-width: 48px;
+  border-radius: 10px;
+  min-width: 54px;
+  text-align: center;
+  transition: all .2s ease;
 }
 
-.mobile-menu .nav-cta {
-  display: inline-flex;
+.mobile-menu .lang-switch a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.mobile-menu .lang-switch a.active {
+  color: #1a1a1a;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Mobile menu Rezervacija CTA (existing .btn.btn-primary in HTML) */
+.mobile-menu .btn.btn-primary {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
-  padding: .9rem 1.5rem;
-  font-size: 1rem;
+  margin: 1.75rem 0 .5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(209, 171, 93, 0.25);
+}
+.mobile-menu .btn.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(209, 171, 93, 0.35);
 }
 
 /* Desktop nav only on wider screens — below this we use hamburger */
