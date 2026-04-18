@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="hr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rezervacija — Feniks Dubrovnik Transfers</title>
+  <meta name="description" content="Rezervirajte privatni transfer u Dubrovniku online. Potvrda u 1 satu, fiksna cijena, besplatno otkazivanje do 24 sata." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">F</span>
+        <span>Feniks<span style="color:var(--accent)">.</span>Transfers</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Naslovnica</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="fleet.html">Vozila</a></li>
+        <li><a href="pricing.html">Cijene</a></li>
+        <li><a href="about.html">O nama</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div class="lang-switch">
+          <a href="booking.html" class="active">HR</a>
+          <a href="/en/booking.html">EN</a>
+          <a href="/de/booking.html">DE</a>
+          <a href="/fr/booking.html">FR</a>
+        </div>
+        <a href="booking.html" class="nav-cta active">
+          Rezervacija
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="theme-toggle" aria-label="Promijeni temu">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Meni">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <button class="close-btn" aria-label="Zatvori">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </button>
+    <ul>
+      <li><a href="index.html">Naslovnica</a></li>
+      <li><a href="services.html">Usluge</a></li>
+      <li><a href="fleet.html">Vozila</a></li>
+      <li><a href="pricing.html">Cijene</a></li>
+      <li><a href="about.html">O nama</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="booking.html" class="active">HR</a>
+      <a href="/en/booking.html">EN</a>
+      <a href="/de/booking.html">DE</a>
+      <a href="/fr/booking.html">FR</a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Naslovnica</a><span class="sep">/</span>Rezervacija</nav>
+      <div class="eyebrow">Online rezervacija</div>
+      <h1>Rezervirajte svoj <span style="color:var(--text)">transfer</span></h1>
+      <p class="lead">
+        Ispunite formu — potvrdu s detaljima vozila i vozača dobivate mailom u roku od 1 sata. Plaćanje tek nakon potvrde.
+      </p>
+    </div>
+  </header>
+
+  <!-- BOOKING -->
+  <section style="padding-top:3rem">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Main form -->
+        <div class="booking-main">
+          <h2>Detalji vožnje</h2>
+          <form onsubmit="event.preventDefault();alert('Hvala! Potvrdu ćete dobiti na email u roku od sat vremena.');">
+
+            <!-- Trip type -->
+            <div>
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem">Vrsta putovanja</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="triptype" value="oneway" checked> Jednosmjerno</label>
+                <label class="radio-pill"><input type="radio" name="triptype" value="roundtrip"> Povratno</label>
+                <label class="radio-pill"><input type="radio" name="triptype" value="hourly"> Na sat</label>
+                <label class="radio-pill"><input type="radio" name="triptype" value="tour"> Jednodnevni izlet</label>
+              </div>
+            </div>
+
+            <!-- Pickup/dropoff -->
+            <div class="form-row">
+              <div class="form-field">
+                <label>Polazište</label>
+                <div class="custom-select" data-name="pickup">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <ul class="select-options">
+                    <li data-value="airport">Zračna luka Dubrovnik</li>
+                    <li data-value="oldtown">Dubrovnik — Stari grad</li>
+                    <li data-value="hotel">Dubrovnik — hotel / smještaj</li>
+                    <li data-value="cavtat">Cavtat</li>
+                    <li data-value="mlini">Mlini / Srebreno</li>
+                    <li data-value="slano">Slano</li>
+                    <li data-value="ston">Ston / Pelješac</li>
+                    <li data-value="split">Split</li>
+                    <li data-value="mostar">Mostar (BiH)</li>
+                    <li data-value="kotor">Kotor (Crna Gora)</li>
+                    <li data-value="budva">Budva (Crna Gora)</li>
+                    <li data-value="other">Drugo</li>
+                  </ul>
+                  <input type="hidden" name="pickup">
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Odredište</label>
+                <div class="custom-select" data-name="dropoff">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <ul class="select-options">
+                    <li data-value="airport">Zračna luka Dubrovnik</li>
+                    <li data-value="oldtown">Dubrovnik — Stari grad</li>
+                    <li data-value="hotel">Dubrovnik — hotel / smještaj</li>
+                    <li data-value="cavtat">Cavtat</li>
+                    <li data-value="mlini">Mlini / Srebreno</li>
+                    <li data-value="slano">Slano</li>
+                    <li data-value="ston">Ston / Pelješac</li>
+                    <li data-value="split">Split</li>
+                    <li data-value="mostar">Mostar (BiH)</li>
+                    <li data-value="kotor">Kotor (Crna Gora)</li>
+                    <li data-value="budva">Budva (Crna Gora)</li>
+                    <li data-value="other">Drugo</li>
+                  </ul>
+                  <input type="hidden" name="dropoff">
+                </div>
+              </div>
+            </div>
+
+            <!-- Date/time -->
+            <div class="form-row">
+              <div class="form-field">
+                <label>Datum</label>
+                <div class="date-picker-wrap">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <div class="cal-dropdown"></div>
+                  <input type="hidden" name="date">
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Vrijeme</label>
+                <div class="time-picker-wrap">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <div class="time-dropdown"></div>
+                  <input type="hidden" name="time">
+                </div>
+              </div>
+            </div>
+
+            <!-- Return date (optional) -->
+            <div class="form-row">
+              <div class="form-field">
+                <label>Povratak (neobavezno)</label>
+                <div class="date-picker-wrap">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <div class="cal-dropdown"></div>
+                  <input type="hidden" name="rdate">
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Povratak — vrijeme</label>
+                <div class="time-picker-wrap">
+                  <div class="select-trigger"><span>Odaberite...</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <div class="time-dropdown"></div>
+                  <input type="hidden" name="rtime">
+                </div>
+              </div>
+            </div>
+
+            <!-- Flight & passengers -->
+            <div class="form-row">
+              <div class="form-field">
+                <label for="b-flight">Broj leta (aerodromski transfer)</label>
+                <input type="text" id="b-flight" name="flight" placeholder="Npr. OU 365">
+              </div>
+              <div class="form-field">
+                <label>Broj putnika</label>
+                <div class="custom-select" data-name="passengers">
+                  <div class="select-trigger"><span>2</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <ul class="select-options">
+                    <li data-value="1">1</li><li data-value="2" class="selected">2</li><li data-value="3">3</li><li data-value="4">4</li>
+                    <li data-value="5">5</li><li data-value="6">6</li><li data-value="7">7</li><li data-value="8">8</li>
+                    <li data-value="9">9</li><li data-value="10">10</li><li data-value="12">12</li><li data-value="16">16</li>
+                  </ul>
+                  <input type="hidden" name="passengers" value="2">
+                </div>
+              </div>
+            </div>
+
+            <!-- Luggage / child seats -->
+            <div class="form-row">
+              <div class="form-field">
+                <label>Komada prtljage</label>
+                <div class="custom-select" data-name="luggage">
+                  <div class="select-trigger"><span>2</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <ul class="select-options">
+                    <li data-value="0">0</li><li data-value="1">1</li><li data-value="2" class="selected">2</li>
+                    <li data-value="3">3</li><li data-value="4">4</li><li data-value="5">5</li>
+                    <li data-value="6">6</li><li data-value="7">7</li><li data-value="8+">8+</li>
+                  </ul>
+                  <input type="hidden" name="luggage" value="2">
+                </div>
+              </div>
+              <div class="form-field">
+                <label>Dječje sjedalice</label>
+                <div class="custom-select" data-name="childseats">
+                  <div class="select-trigger"><span>0</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                  <ul class="select-options">
+                    <li data-value="0" class="selected">0</li><li data-value="1">1</li><li data-value="2">2</li>
+                    <li data-value="3">3</li><li data-value="4">4</li>
+                  </ul>
+                  <input type="hidden" name="childseats" value="0">
+                </div>
+              </div>
+            </div>
+
+            <!-- Vehicle preference -->
+            <div>
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem">Preferirano vozilo</label>
+              <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="vehicle" value="any" checked> Najbolje dostupno</label>
+                <label class="radio-pill"><input type="radio" name="vehicle" value="sedan"> Sedan E-Class</label>
+                <label class="radio-pill"><input type="radio" name="vehicle" value="vclass"> V-Class Van</label>
+                <label class="radio-pill"><input type="radio" name="vehicle" value="sclass"> S-Class Executive</label>
+                <label class="radio-pill"><input type="radio" name="vehicle" value="sprinter"> Sprinter Minibus</label>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <h2 style="margin-top:1rem">Vaši podaci</h2>
+
+            <div>
+              <label for="b-name" style="display:block;font-size:.78rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.35rem">Ime i prezime</label>
+              <input type="text" id="b-name" name="name" placeholder="Ivan Horvat" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="b-email">Email</label>
+                <input type="email" id="b-email" name="email" placeholder="ivan@primjer.hr" required>
+              </div>
+              <div class="form-field">
+                <label for="b-phone">Telefon / WhatsApp</label>
+                <input type="tel" id="b-phone" name="phone" placeholder="+385 99..." required>
+              </div>
+            </div>
+
+            <div>
+              <label for="b-notes" style="display:block;font-size:.78rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.35rem">Dodatne napomene</label>
+              <textarea id="b-notes" name="notes" placeholder="Broj ljudi, stajanja usput, zahtjevi za vozilo, ukrasi..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary" style="justify-content:center;margin-top:.5rem">
+              Pošalji zahtjev za rezervaciju
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+
+            <p style="font-size:.82rem;color:var(--text-dim);margin-top:.5rem;text-align:center">
+              Ovo je zahtjev, ne obvezujuća rezervacija. Potvrdu s konačnom cijenom dobit ćete mailom.
+            </p>
+          </form>
+        </div>
+
+        <!-- Aside -->
+        <aside class="booking-aside">
+          <h3>Što nakon što pošaljete?</h3>
+          <p>Proces je jednostavan — javljamo se prvo, plaćanje je na samom kraju.</p>
+          <ol style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:1rem;counter-reset:step">
+            <li style="counter-increment:step;display:flex;gap:.75rem;align-items:flex-start">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0">1</span>
+              <div>
+                <strong style="color:var(--text);display:block;margin-bottom:.15rem">Javljamo se unutar 1h</strong>
+                <span style="font-size:.88rem;color:var(--text-muted)">Email s dostupnošću, točnom cijenom i detaljima vozila.</span>
+              </div>
+            </li>
+            <li style="counter-increment:step;display:flex;gap:.75rem;align-items:flex-start">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0">2</span>
+              <div>
+                <strong style="color:var(--text);display:block;margin-bottom:.15rem">Potvrdite rezervaciju</strong>
+                <span style="font-size:.88rem;color:var(--text-muted)">Na email šaljemo link za potvrdu + opciju plaćanja.</span>
+              </div>
+            </li>
+            <li style="counter-increment:step;display:flex;gap:.75rem;align-items:flex-start">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0">3</span>
+              <div>
+                <strong style="color:var(--text);display:block;margin-bottom:.15rem">Kontakt vozača</strong>
+                <span style="font-size:.88rem;color:var(--text-muted)">Dan prije dobivate broj i ime vozača, slika vozila i registracija.</span>
+              </div>
+            </li>
+            <li style="counter-increment:step;display:flex;gap:.75rem;align-items:flex-start">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0">4</span>
+              <div>
+                <strong style="color:var(--text);display:block;margin-bottom:.15rem">Vožnja</strong>
+                <span style="font-size:.88rem;color:var(--text-muted)">Vozač vas dočekuje s natpisom, plaćate po dolasku ili unaprijed.</span>
+              </div>
+            </li>
+          </ol>
+
+          <h3>Uključeno u svaku vožnju</h3>
+          <ul>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Pratimo let / brod u realnom vremenu
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              60 minuta besplatnog čekanja
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Dječje sjedalice bez doplate
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Besplatan Wi-Fi
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Flaširana voda
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Otkazivanje do 24h — besplatno
+            </li>
+          </ul>
+
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+            <p style="font-size:.88rem;color:var(--text-muted);margin:0">
+              Brži kontakt?<br>
+              <a href="https://wa.me/38599XXXXXXX" style="color:var(--accent);font-weight:600">💬 WhatsApp</a>
+              &nbsp;·&nbsp;
+              <a href="tel:+38599XXXXXXX" style="color:var(--accent);font-weight:600">📞 Nazovite</a>
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom:1rem">
+            <span class="logo-mark">F</span>
+            <span>Feniks<span style="color:var(--accent)">.</span>Transfers</span>
+          </div>
+          <p style="max-width:320px;font-size:.9rem">Profesionalna agencija za privatne transfere u Dubrovniku. Sigurno, udobno i pouzdano putovanje.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Stranice</h4>
+          <ul>
+            <li><a href="index.html">Naslovnica</a></li>
+            <li><a href="services.html">Usluge</a></li>
+            <li><a href="fleet.html">Vozila</a></li>
+            <li><a href="pricing.html">Cijene</a></li>
+            <li><a href="booking.html">Rezervacija</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informacije</h4>
+          <ul>
+            <li><a href="about.html">O nama</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="#">Dubrovnik, Hrvatska</a></li>
+            <li><a href="tel:+385">+385 XX XXX XXXX</a></li>
+            <li><a href="mailto:info@feniks-transfers.com">info@feniks-transfers.com</a></li>
+            <li><a href="#">Dostupni 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Feniks Dubrovnik Transfers. Sva prava pridržana.</div>
+        <div>Putujte sigurno. Putujte udobno. Putujte s Feniksom.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
