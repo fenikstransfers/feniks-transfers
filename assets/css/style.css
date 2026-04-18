@@ -339,7 +339,10 @@ section { padding: 5rem 0; }
 
 /* Hero dark variant with bg image */
 .hero.hero-dark {
-  background: #0a0a0a;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(209, 171, 93, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(30, 80, 120, 0.35) 0%, transparent 50%),
+    linear-gradient(135deg, #0a1828 0%, #1a2942 40%, #0f1e33 100%);
   overflow: hidden;
 }
 
