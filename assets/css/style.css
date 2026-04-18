@@ -200,16 +200,18 @@ section { padding: 5rem 0; }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.35rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
 }
 
 .nav-links a {
   color: #555;
-  font-size: .95rem;
+  font-size: .9rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 [data-theme="dark"] .nav-links a { color: #bbb; }
@@ -242,10 +244,11 @@ section { padding: 5rem 0; }
 .lang-switch {
   display: flex;
   align-items: center;
-  gap: .25rem;
-  margin-left: 1rem;
-  padding-left: 1rem;
+  gap: .15rem;
+  margin-left: .75rem;
+  padding-left: .75rem;
   border-left: 1px solid var(--border);
+  white-space: nowrap;
 }
 
 .lang-switch a {
@@ -1271,8 +1274,9 @@ footer {
   inset: 0;
   background: var(--bg);
   z-index: 100;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem 2rem;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .mobile-menu.open { display: flex; }
@@ -1280,37 +1284,83 @@ footer {
 .mobile-menu .close-btn {
   align-self: flex-end;
   background: none;
-  border: none;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   color: var(--text);
   cursor: pointer;
   padding: .5rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
 }
 
 .mobile-menu ul {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 1.5rem 0 0;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: .25rem;
 }
+
+.mobile-menu ul li {
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu ul li:last-child { border-bottom: none; }
 
 .mobile-menu a {
+  display: block;
   font-size: 1.15rem;
   font-weight: 600;
+  padding: 1rem 0;
+  color: var(--text);
 }
 
+.mobile-menu a.active { color: var(--accent); }
+
 .mobile-menu .lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
   border-left: none;
-  margin-left: 0;
-  padding-left: 0;
-  padding-top: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 1.5rem 0 0;
   border-top: 1px solid var(--border);
 }
 
-@media (min-width: 880px) {
+.mobile-menu .lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem .9rem;
+  font-size: .85rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-width: 48px;
+}
+
+.mobile-menu .nav-cta {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: .9rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Desktop nav only on wider screens — below this we use hamburger */
+@media (min-width: 1080px) {
   .nav-links, .nav-cta, .lang-switch { display: flex; }
   .mobile-menu-btn { display: none; }
+}
+/* Between 1080 and 1240 — tighten spacing */
+@media (min-width: 1080px) and (max-width: 1240px) {
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: .85rem; }
+  .lang-switch { margin-left: .5rem; padding-left: .5rem; }
+  .lang-switch a { font-size: .68rem; padding: .15rem .25rem; }
+  .nav-cta { padding: .5rem .85rem; font-size: .85rem; }
 }
 
 /* -------- Theme toggle -------- */
