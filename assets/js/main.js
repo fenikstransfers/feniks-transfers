@@ -3,15 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------- Mobile menu --------
   const btn = document.querySelector('.mobile-menu-btn');
   const menu = document.querySelector('.mobile-menu');
+  const backdrop = document.querySelector('.mobile-menu-backdrop');
   const close = menu?.querySelector('.close-btn');
 
   if (btn && menu) {
     btn.addEventListener('click', () => {
       menu.classList.add('open');
+      backdrop?.classList.add('open');
       document.body.style.overflow = 'hidden';
     });
-    const shut = () => { menu.classList.remove('open'); document.body.style.overflow = ''; };
+    const shut = () => {
+      menu.classList.remove('open');
+      backdrop?.classList.remove('open');
+      document.body.style.overflow = '';
+    };
     close?.addEventListener('click', shut);
+    backdrop?.addEventListener('click', shut);
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
   }
 

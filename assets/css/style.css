@@ -1268,10 +1268,32 @@ footer {
   padding: .5rem;
 }
 
+/* Backdrop behind the menu drawer — taps close menu */
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s ease, visibility 0s linear .35s;
+}
+.mobile-menu-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .35s ease, visibility 0s linear 0s;
+}
+
 .mobile-menu {
   display: flex;
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 66%;
+  max-width: 380px;
+  min-width: 260px;
   background: var(--bg);
   z-index: 100;
   padding: 1.25rem 1.5rem 2rem;
@@ -1284,7 +1306,7 @@ footer {
     visibility 0s linear .35s;
   visibility: hidden;
   text-align: right;
-  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
 }
 
 .mobile-menu.open {
@@ -1314,7 +1336,7 @@ footer {
 .mobile-menu ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: .75rem 0 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1347,9 +1369,9 @@ footer {
 
 .mobile-menu a {
   display: block;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  padding: .7rem 0;
+  padding: .45rem 0;
   color: var(--text);
   text-align: right;
   transition: color .2s ease;
@@ -1361,10 +1383,10 @@ footer {
 .mobile-menu .lang-switch {
   display: flex;
   justify-content: flex-end;
-  gap: .5rem;
+  gap: .35rem;
   border-left: none;
-  margin: 1.25rem 0 0;
-  padding: 1.25rem 0 0;
+  margin: 1rem 0 0;
+  padding: 1rem 0 0;
   border-top: 1px solid var(--border);
 }
 
@@ -1372,14 +1394,14 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .6rem 1rem;
-  font-size: .9rem;
+  padding: .35rem .65rem;
+  font-size: .75rem;
   font-weight: 700;
   color: #1a1a1a;
   background: #f5f3ef;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  min-width: 54px;
+  border-radius: 7px;
+  min-width: 38px;
   text-align: center;
   transition: all .2s ease;
 }
@@ -1400,12 +1422,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.75rem 0 .5rem;
-  padding: 1rem 1.5rem;
+  margin: 1.25rem 0 .25rem;
+  padding: .85rem 1.25rem;
   width: 100%;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 4px 14px rgba(209, 171, 93, 0.25);
 }
 .mobile-menu .btn.btn-primary:hover {
