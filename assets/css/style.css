@@ -1355,7 +1355,7 @@ footer {
   inset: 0;
   background:
     radial-gradient(600px circle at 20% 20%, var(--accent-soft), transparent 60%),
-    radial-gradient(500px circle at 85% 90%, rgba(204, 172, 0, 0.05), transparent 55%);
+    radial-gradient(500px circle at 85% 90%, rgba(158, 126, 56, 0.05), transparent 55%);
   pointer-events: none;
 }
 .page-hero > .container { position: relative; z-index: 1; }
