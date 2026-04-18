@@ -367,3 +367,46 @@ document.addEventListener('DOMContentLoaded', () => {
   calculatePrice();
 
 });
+
+/* ============================================================
+   Background-image load detection with picsum fallback.
+   Finds elements with inline background-image:url(unsplash...),
+   preloads the image, and swaps to picsum seed on error.
+============================================================ */
+(function () {
+  "use strict";
+  function parseBg(el) {
+    var bg = el.style.backgroundImage || "";
+    var m = bg.match(/url\((['"]?)(https:\/\/images\.unsplash\.com\/(photo-[a-f0-9-]+)[^'")]*)\1\)/);
+    if (\!m) return null;
+    return { url: m[2], id: m[3] };
+  }
+  var fallbackMap = {
+    "photo-1523906834658-6e24ef2386f9": "sea-cliff-1",
+    "photo-1564507592333-c60657eea523": "adriatic-med",
+    "photo-1519046904884-53103b34b206": "sea-aerial",
+    "photo-1555990614-d0cd7bab3906": "old-town-1",
+    "photo-1530549387789-4c1017266635": "cliff-view",
+    "photo-1505142468610-359e7d316be0": "sea-sunset",
+    "photo-1507525428034-b723cf961d3e": "golden-beach",
+    "photo-1501785888041-af3ef285b470": "adriatic-blue",
+    "photo-1555990538-11b2ac9cc5e7": "stone-bridge"
+  };
+  function check(el) {
+    var info = parseBg(el);
+    if (\!info) return;
+    var img = new Image();
+    img.onerror = function () {
+      var seed = fallbackMap[info.id] || "adriatic-sea";
+      var w = el.offsetWidth >= 1200 ? 1600 : 800;
+      var h = Math.round((w * 9) / 16);
+      var fallback = "https://picsum.photos/seed/" + seed + "/" + w + "/" + h;
+      el.style.backgroundImage = "url('" + fallback + "')";
+    };
+    img.src = info.url;
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".hero-bg, .post-thumb");
+    els.forEach(check);
+  });
+})();

@@ -359,6 +359,8 @@ section { padding: 5rem 0; }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Fallback if image fails to load: Adriatic-themed gradient */
+  background-color: #0a1828;
 }
 
 .hero-bg::after {
