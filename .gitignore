@@ -12,6 +12,8 @@
 *.swo
 
 # Local context / secrets — not for production
+*-context.md
+feniks-context.md
 mondaytime-context.md
 *.local
 .env
@@ -19,7 +21,7 @@ mondaytime-context.md
 .env.*.local
 secrets/
 
-# Node (ako se bude koristio npm u budućnosti)
+# Node
 node_modules/
 dist/
 npm-debug.log*
