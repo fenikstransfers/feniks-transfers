@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function parseBg(el) {
     var bg = el.style.backgroundImage || "";
     var m = bg.match(/url\((['"]?)(https:\/\/images\.unsplash\.com\/(photo-[a-f0-9-]+)[^'")]*)\1\)/);
-    if (\!m) return null;
+    if (!m) return null;
     return { url: m[2], id: m[3] };
   }
   var fallbackMap = {
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   function check(el) {
     var info = parseBg(el);
-    if (\!info) return;
+    if (!info) return;
     var img = new Image();
     img.onerror = function () {
       var seed = fallbackMap[info.id] || "adriatic-sea";
