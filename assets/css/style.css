@@ -1428,12 +1428,17 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   border-radius: 10px;
+  background: var(--accent);
+  color: #1a1a1a !important;
   box-shadow: 0 4px 14px rgba(209, 171, 93, 0.25);
 }
 .mobile-menu .btn.btn-primary:hover {
+  color: #1a1a1a !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(209, 171, 93, 0.35);
 }
+/* Ensure all SVG arrows/icons inside the CTA also show dark */
+.mobile-menu .btn.btn-primary svg { color: #1a1a1a; stroke: #1a1a1a; }
 
 /* Desktop nav only on wider screens — below this we use hamburger */
 @media (min-width: 1080px) {
